@@ -12,10 +12,10 @@ function Header () {
 
             <ToolBar>
             <ToolBarItems>
-                <Li><A href="./">Home</A></Li>
-                <Li><A href="" target="_blank">News</A></Li>
-                <Li><A href="">Missions</A></Li>
-                <Li><A href="">About Us</A></Li>
+                <Li><A href="">Home</A></Li>
+                <Li><A href="https://www.nasa.gov/" target="_blank">News</A></Li>
+                <Li><A href="https://www.nasa.gov/missions" target="_blank" >Missions</A></Li>
+                <Li><A href="https://www.nasa.gov/about/index.html" target="_blank" >About Us</A></Li>
                 <Li><InputHeader type="search" placeholder="Search" /></Li>
             </ToolBarItems>
             </ToolBar>

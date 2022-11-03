@@ -27,19 +27,18 @@ export const Button = styled.button `
     text-transform: uppercase;
     background-color: #BEBDB8;
     font-size: 0.80rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     cursor: pointer;
 `
 
-export const Svg = styled.svg `
-    display: flex;
-    justify-content: center;
-    height: 1.5rem;
-    margin: 1vh 0;
-`
-
 export const ProductName = styled.h3 `
     margin-top: 0.40rem;
+    font-weight: 900;
+`
+
+export const ProductPrice = styled.h3 `
+    font-weight: 600;
+    margin-top: 0.20rem;
 `
