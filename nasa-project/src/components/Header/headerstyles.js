@@ -38,6 +38,7 @@ export const ToolBarItems = styled.ul `
 export const A = styled.a `
     text-decoration: none;
     color: white;
+    font-weight: 700;
 `
 
 export const InputHeader = styled.input `

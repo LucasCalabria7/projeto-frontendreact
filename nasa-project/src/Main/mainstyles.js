@@ -1,4 +1,3 @@
-import React from 'react' 
 import styled from 'styled-components'
 
 export const MainContainer = styled.div `
@@ -12,7 +11,7 @@ export const FilterArea = styled.section `
     margin: 0.5rem;
     border-radius: 1rem;
 `
-export const ProductsArea = styled.section `
+export const CardsContainer = styled.section `
     width: 60vw;
     display:flex;
     justify-content:center; 
