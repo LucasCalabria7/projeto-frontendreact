@@ -10,6 +10,9 @@ function Main () {
     const [buscaNome, setBuscaNome] = useState("")
     const [ordemNome, setOrdemNome] = useState("")
     const [ordemPreco, setOrdemPreco] = useState("")
+    const [listaCompra, setListaCompra] = useState([])
+    const [novaCompra, setNovaCompra] = useState("")
+
     let [produtos, setProdutos] = useState(
         [ 
         {
@@ -47,6 +50,18 @@ function Main () {
             nome: "StarLink Connection",
             preco: 15,
             imagemUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCErP7bRE9IcnoIhahFTKPSoKjD0LqHE0ZyA&usqp=CAU",
+        },
+        {
+            id: 6,
+            nome: "Hubble Telescope",
+            preco: 250,
+            imagemUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQesHahdb8P05Xp3gVPl2rP4V5mDn7NAKgRrw&usqp=CAU",
+        },
+        {
+            id: 7,
+            nome: "ChangeSite(Y) - Moon Mineral",
+            preco: 45,
+            imagemUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0vkAjvyeAfGQusQgJVyC7VvJzwtyb_FUuaaDvxOg8k4Lr-F2ozcF84Ty1AiNWdqGycc&usqp=CAU",
         }
     ])
 
@@ -64,7 +79,12 @@ function Main () {
                 />
             </FilterArea>
 
-            <CardsContainer>
+            <CardsContainer
+                            listaCompra={listaCompra}
+                            setListaCompra={setListaCompra}
+                            novaCompra={novaCompra}
+                            setNovaCompra={setNovaCompra}
+            >
                 {produtos
                 .filter((produto) =>{
                 return produto.nome.toLowerCase().includes(buscaNome.toLowerCase())
@@ -92,7 +112,12 @@ function Main () {
             </CardsContainer>
 
             <ShopArea>
-                <Buy />
+                <Buy 
+                listaCompra={listaCompra}
+                setListaCompra={setListaCompra}
+                novaCompra={novaCompra}
+                setNovaCompra={setNovaCompra}
+                />
             </ShopArea>
             
         </MainContainer>
