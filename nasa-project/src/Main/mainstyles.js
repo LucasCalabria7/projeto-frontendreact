@@ -20,9 +20,7 @@ export const CardsContainer = styled.section `
 export const ShopArea = styled.section `
 width: 20vw;
 min-height: 80vh;
-background-color: 	#48494B;
+background-color: #48494B;
 margin: 0.5rem;
 border-radius: 1rem;
-display:flex;
-justify-content:center;
 `

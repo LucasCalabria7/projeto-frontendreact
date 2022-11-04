@@ -9,7 +9,7 @@ export const ImgFilter = styled.img `
 export const FilterTitle = styled.p `
     color: white;
     margin-top:2vh;
-    height: 2.5rem;
+    height: 2.5rem; 
 `
 
 export const FilterHeader = styled.section `
