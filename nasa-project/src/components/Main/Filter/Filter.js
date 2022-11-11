@@ -1,5 +1,6 @@
 import {ImgFilter, FilterTitle, FilterHeader, FilterMain, InputSearch, OrderTitle, InputSelect} from './filterstyle'
-import FilterIcon from './iconfilter.png'
+
+import FilterIcon from '../../../assets/iconfilter.png'
 
 
 export function Filter (props) {

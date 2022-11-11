@@ -1,7 +1,10 @@
-import styled, {createGlobalStyle} from 'styled-components'
+import React from 'react'
+
 import Header from './components/Header/Header'
-import Main from './Main/Main'
+import Main from './components/Main/Main/Main'
+
 import {css} from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
 
 const InterFont = css`@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')`
 

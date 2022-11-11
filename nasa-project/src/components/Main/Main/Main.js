@@ -1,19 +1,20 @@
 import React from 'react'
-import {MainContainer, FilterArea, CardsContainer, ShopArea} from './mainstyles'
-import {Filter} from './Filter/Filter.js'
-import {Buy} from './Buy/Buy.js'
-import Product from './Product'
 import {useState} from 'react'
+
+import {Filter} from '../Filter/Filter'
+import {Card} from './Card'
+import {Buy} from '../Buy/Buy'
+
+import {MainContainer, FilterArea, CardsContainer, ShopArea} from './mainstyles'
 
 
 function Main () {
     const [buscaNome, setBuscaNome] = useState("")
     const [ordemNome, setOrdemNome] = useState("")
     const [ordemPreco, setOrdemPreco] = useState("")
-    const [listaCompra, setListaCompra] = useState([])
-    const [novaCompra, setNovaCompra] = useState("")
+    const [compra, setCompra] = useState([])
 
-    let [produtos, setProdutos] = useState(
+    const [produtos, setProdutos] = useState(
         [ 
         {
             id: 0,
@@ -25,7 +26,7 @@ function Main () {
             id: 1,
             nome: "SpaceX Space Suit",
             preco: 50,
-            imagemUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeFAfS1wBt6JTVs7rf1LHiTBv9QM_oTwe5A&usqp=CAU",
+            imagemUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeFAfS1wBt6JTVs7rf1LHiTBv9QM_oTwe5A&usqp=CA",
         },
         {
             id: 2,
@@ -65,6 +66,19 @@ function Main () {
         }
     ])
 
+    const onClickBuy = () => {
+        let copyCompra = [...compra]
+        for(let i in produtos){
+        let newCompra = {
+            id: Date.now(),
+            nome: produtos[i].nome,
+            preco: produtos[i].preco
+        }
+        copyCompra.push(newCompra)
+        setCompra(copyCompra)
+    }
+    }
+
 
     return (
         <MainContainer>
@@ -79,12 +93,7 @@ function Main () {
                 />
             </FilterArea>
 
-            <CardsContainer
-                            listaCompra={listaCompra}
-                            setListaCompra={setListaCompra}
-                            novaCompra={novaCompra}
-                            setNovaCompra={setNovaCompra}
-            >
+            <CardsContainer>
                 {produtos
                 .filter((produto) =>{
                 return produto.nome.toLowerCase().includes(buscaNome.toLowerCase())
@@ -104,20 +113,21 @@ function Main () {
                     }
                 })
                 .map((produto)=>{
-                    return <Product
+                    return <Card
                     key={produto.id}
                     produto={produto}
+                    onClickBuy={onClickBuy}
                     />
                 })}
             </CardsContainer>
 
             <ShopArea>
-                <Buy 
-                listaCompra={listaCompra}
-                setListaCompra={setListaCompra}
-                novaCompra={novaCompra}
-                setNovaCompra={setNovaCompra}
-                />
+                {compra.map((produto, index)=>{
+                    return <Buy 
+                    key={index}
+                    produto={produto}
+                    />
+                })}
             </ShopArea>
             
         </MainContainer>

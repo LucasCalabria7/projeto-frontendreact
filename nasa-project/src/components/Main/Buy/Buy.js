@@ -1,13 +1,9 @@
 import {ImgBuy, BuyTitle, BuyHeader, MainBuy, CardBuy, BuyName, BuyPrice, RemoveButton} from './buystyle'
-import BuyIcon from './buyicon.png'
+
+import BuyIcon from '../../../assets/buyicon.png'
 
 export function Buy (props) {
-    const adicionaTarefa = () => {
-        const tarefaNova = [...props.listaCompra, props.novaCompra ]
-        props.setListaCompra(tarefaNova)
-        props.setNovaCompra("")
-    }
-
+    console.log(props)
     return (
     <>
         <BuyHeader>
@@ -17,8 +13,8 @@ export function Buy (props) {
 
         <MainBuy>
         <CardBuy>
-            <BuyName>1x Hubble Telescope </BuyName>
-            <BuyPrice>$ 100k</BuyPrice>
+            <BuyName>1x {props.produto.nome}</BuyName>
+            <BuyPrice>{props.produto.preco}K</BuyPrice>
             <RemoveButton>X</RemoveButton>
         </CardBuy>
         </MainBuy>

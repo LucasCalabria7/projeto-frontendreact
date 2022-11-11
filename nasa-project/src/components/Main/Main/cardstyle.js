@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.div `
+export const CardGlobalStyle = styled.div `
     margin: 1rem;
     width: 25vw;
     height: 60vh;

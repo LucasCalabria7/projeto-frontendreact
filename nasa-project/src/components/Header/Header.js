@@ -1,13 +1,15 @@
 import React from 'react'
+
 import {HeaderContainer, HeaderLogo, ToolBar, Li, ToolBarItems, A, InputHeader} from './headerstyles'
 
+import nasalogo from '../../assets/NASA-logo.png'
 
 
 function Header () {
     return (
         <HeaderContainer>
             <HeaderLogo className="logo-header">
-            <img src="https://seeklogo.com/images/N/NASA-logo-42F0886A45-seeklogo.com.png" alt="logo-header" />
+            <img src={nasalogo} alt="logo-header" />
             </HeaderLogo>
 
             <ToolBar>
