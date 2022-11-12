@@ -5,7 +5,9 @@ import {Filter} from '../Filter/Filter'
 import {Card} from './Card'
 import {Buy} from '../Buy/Buy'
 
-import {MainContainer, FilterArea, CardsContainer, ShopArea} from './mainstyles'
+import BuyIcon from '../../../assets/buyicon.png'
+
+import {MainContainer, FilterArea, CardsContainer, ShopArea, ImgBuy, BuyTitle, BuyHeader,} from './mainstyles'
 
 
 function Main () {
@@ -68,15 +70,13 @@ function Main () {
 
     const onClickBuy = () => {
         let copyCompra = [...compra]
-        for(let i in produtos){
         let newCompra = {
             id: Date.now(),
-            nome: produtos[i].nome,
-            preco: produtos[i].preco
+            nome: produtos[0].nome,
+            preco: produtos[0].preco
         }
         copyCompra.push(newCompra)
         setCompra(copyCompra)
-    }
     }
 
 
@@ -122,12 +122,17 @@ function Main () {
             </CardsContainer>
 
             <ShopArea>
+                <BuyHeader>
+                    <ImgBuy src={BuyIcon} alt="buy-cart" />
+                    <BuyTitle>Buying</BuyTitle>
+                </BuyHeader>
+
                 {compra.map((produto, index)=>{
                     return <Buy 
                     key={index}
                     produto={produto}
                     />
-                })}
+                })} 
             </ShopArea>
             
         </MainContainer>
