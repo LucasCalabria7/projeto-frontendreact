@@ -14,7 +14,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: 1.10rem Inter;
   }
 `
 
@@ -24,6 +23,7 @@ const Container = styled.div `
   min-height: 100vh;
   max-width: 100vw;
   background-color: #363636;
+  font-family: InterFont;
 `
 
 

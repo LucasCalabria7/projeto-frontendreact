@@ -5,7 +5,7 @@ export const MainBuy = styled.section `
     display: flex;
     justify-content: center;
     flex-direction: column;
-`
+` 
 
 export const CardBuy = styled.section `
     text-align: center;

@@ -42,3 +42,29 @@ export const BuyHeader = styled.section `
     justify-content:center;
     height:15vh
 `
+export const BuyFooter = styled.section `
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    `
+
+export const CardFooter = styled.section `
+    border-radius: 0.5rem;
+    height: 10vh;
+    background-color: #DDDDDD;
+    box-shadow: 0.15rem 0.15rem 0.1rem black;
+    border: 2px groove black;
+    text-transform: uppercase;
+    width: 18vw;
+    margin: 1.25vh auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.25rem;
+`
+
+export const TextFooter = styled.p `
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: InterFont;
+    `

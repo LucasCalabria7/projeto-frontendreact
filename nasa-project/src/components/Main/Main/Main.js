@@ -7,7 +7,7 @@ import {Buy} from '../Buy/Buy'
 
 import BuyIcon from '../../../assets/buyicon.png'
 
-import {MainContainer, FilterArea, CardsContainer, ShopArea, ImgBuy, BuyTitle, BuyHeader,} from './mainstyles'
+import {MainContainer, FilterArea, CardsContainer, ShopArea, ImgBuy, BuyTitle, BuyHeader, BuyFooter, CardFooter, TextFooter} from './mainstyles'
 
 
 function Main () {
@@ -15,6 +15,7 @@ function Main () {
     const [ordemNome, setOrdemNome] = useState("")
     const [ordemPreco, setOrdemPreco] = useState("")
     const [compra, setCompra] = useState([])
+    const [counterCompra, setCounterCompra] = useState(0)
 
     const [produtos, setProdutos] = useState(
         [ 
@@ -68,16 +69,17 @@ function Main () {
         }
     ])
 
-    const onClickBuy = () => {
+    const onClickBuy = (nameCardBuy, priceCardBuy) => {
         let copyCompra = [...compra]
         let newCompra = {
             id: Date.now(),
-            nome: produtos[0].nome,
-            preco: produtos[0].preco
+            nome: nameCardBuy,
+            preco: priceCardBuy
         }
         copyCompra.push(newCompra)
         setCompra(copyCompra)
     }
+
 
 
     return (
@@ -131,8 +133,17 @@ function Main () {
                     return <Buy 
                     key={index}
                     produto={produto}
+                    compra={compra}
+                    setCompra={setCompra}
                     />
-                })} 
+                })}
+
+                <BuyFooter>
+                    <CardFooter>
+                    <TextFooter>{compra.length} Products</TextFooter>
+                    <TextFooter>Total: {}k</TextFooter>
+                    </CardFooter>
+                </BuyFooter>
             </ShopArea>
             
         </MainContainer>

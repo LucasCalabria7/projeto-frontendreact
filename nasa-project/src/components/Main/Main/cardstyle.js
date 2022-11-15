@@ -25,7 +25,7 @@ export const Button = styled.button `
     border-radius: 0.5rem;
     padding : 0.30rem;
     text-transform: uppercase;
-    background-color: #BEBDB8;
+    background-color: #DDDDDD;
     font-size: 0.80rem;
     font-weight: 700;
     margin-top: 0.25rem;
@@ -36,9 +36,11 @@ export const Button = styled.button `
 export const ProductName = styled.h3 `
     margin-top: 0.40rem;
     font-weight: 900;
+    font-family: InterFont;
 `
 
 export const ProductPrice = styled.h3 `
     font-weight: 600;
     margin-top: 0.20rem;
+    font-family: InterFont;
 `
