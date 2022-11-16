@@ -78,9 +78,10 @@ function Main () {
         }
         copyCompra.push(newCompra)
         setCompra(copyCompra)
+
+        let finalBuy = counterCompra + priceCardBuy
+        setCounterCompra(finalBuy)
     }
-
-
 
     return (
         <MainContainer>
@@ -141,7 +142,7 @@ function Main () {
                 <BuyFooter>
                     <CardFooter>
                     <TextFooter>{compra.length} Products</TextFooter>
-                    <TextFooter>Total: {}k</TextFooter>
+                    <TextFooter>Total: {counterCompra}k</TextFooter>
                     </CardFooter>
                 </BuyFooter>
             </ShopArea>

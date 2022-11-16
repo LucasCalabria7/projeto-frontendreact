@@ -14,7 +14,6 @@ export function Buy (props) {
         }
     }
 
-    console.log(props)
     return (
     <>
         <MainBuy>

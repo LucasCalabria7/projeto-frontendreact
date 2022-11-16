@@ -7,6 +7,7 @@ export function Card (props) {
     let nameCardBuy = props.produto.nome
     let priceCardBuy = props.produto.preco
 
+    
     return (
     <>
         <CardGlobalStyle>
