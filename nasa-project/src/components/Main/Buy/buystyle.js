@@ -29,7 +29,7 @@ export const BuyName = styled.p `
 export const BuyPrice = styled.p `
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-weight: 500;
 `
 
 export const RemoveButton = styled.button `

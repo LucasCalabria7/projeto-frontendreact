@@ -13,7 +13,7 @@ export function Card (props) {
         <CardGlobalStyle>
             <img src={props.produto.imagemUrl} alt="Item" />
             <ProductName>{nameCardBuy} </ProductName>
-            <ProductPrice>$ {priceCardBuy}k</ProductPrice>
+            <ProductPrice>$ {priceCardBuy}</ProductPrice>
             <Button onClick={()=>props.onClickBuy(nameCardBuy, priceCardBuy)} >buy now!</Button>
         </CardGlobalStyle>
     </>

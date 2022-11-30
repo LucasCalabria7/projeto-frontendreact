@@ -64,7 +64,6 @@ export const CardFooter = styled.section `
 `
 
 export const TextFooter = styled.p `
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1rem;
-    font-family: InterFont;
     `
