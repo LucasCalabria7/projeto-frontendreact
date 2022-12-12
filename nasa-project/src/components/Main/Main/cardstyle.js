@@ -22,13 +22,15 @@ export const CardGlobalStyle = styled.div `
 `
 
 export const Button = styled.button `
+    width: 8rem;
+    height: 2rem;
     border-radius: 0.5rem;
     padding : 0.30rem;
     text-transform: uppercase;
     background-color: #DDDDDD;
-    font-size: 0.80rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.25rem;
     cursor: pointer;
 `

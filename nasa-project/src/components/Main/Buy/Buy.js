@@ -11,9 +11,10 @@ export function Buy (props) {
                 }
             })
             props.setCompra(removeItem)
+
+
             let finalBuy = props.counterCompra - props.produto.preco
             props.setCounterCompra(finalBuy)
-
             if(finalBuy === 0) {
                 localStorage.clear();
             }
