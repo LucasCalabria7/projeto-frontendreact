@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "name": "Tesla Bot",
+        "price": 100,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnu59XOydgOBVLOianNYBDEDe_AzIxNLBjw&usqp=CAU"
+    },
+    {
+        "id": 1,
+        "name": "SpaceX Space Suit",
+        "price": 500,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeFAfS1wBt6JTVs7rf1LHiTBv9QM_oTwe5A&usqp=CA"
+    },
+    {
+        "id": 2,
+        "name": "Occupy Mars Ticket",
+        "price": 5000,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUNqLHyDSpnYy88OT_pbhfUpxt3oz9mX0BAw&usqp=CAU"
+    },
+    {
+        "id": 3,
+        "name": "Starship Space Tour",
+        "price": 2000,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2ZhMNBVkjm01KEhNWLPJIGMe6Mc4cMDCAg&usqp=CAU"
+    },
+    {
+        "id": 4,
+        "name": "NeuraLink Surgery",
+        "price": 350,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUpCa72aGBcIQc4zwPu5Et7m_Zf-1sVBAkg&usqp=CAU"
+    },
+    {
+        "id": 5,
+        "name": "StarLink Connection",
+        "price": 150,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCErP7bRE9IcnoIhahFTKPSoKjD0LqHE0ZyA&usqp=CAU"
+    },
+    {
+        "id": 6,
+        "name": "Hubble Telescope",
+        "price": 2000,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQesHahdb8P05Xp3gVPl2rP4V5mDn7NAKgRrw&usqp=CAU"
+    },
+    {
+        "id": 7,
+        "name": "ChangeSite(Y) - Moon Mineral",
+        "price": 450,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0vkAjvyeAfGQusQgJVyC7VvJzwtyb_FUuaaDvxOg8k4Lr-F2ozcF84Ty1AiNWdqGycc&usqp=CAU"
+    }
+]

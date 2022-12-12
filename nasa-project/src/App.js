@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Header from './components/Header/Header'
-import Main from './components/Main/Main/Main'
+import {Router} from './routes/Route'
 
 import styled, {createGlobalStyle} from 'styled-components'
 
@@ -30,8 +29,7 @@ function App() {
     <>
     <GlobalStyles/>
     <Container>
-      <Header />
-      <Main />
+      <Router />
     </Container>
     </>
   );

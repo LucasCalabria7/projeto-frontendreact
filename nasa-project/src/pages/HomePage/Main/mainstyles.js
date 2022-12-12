@@ -57,7 +57,7 @@ export const CardFooter = styled.section `
     text-transform: uppercase;
     width: 18vw;
     margin: 1.25vh auto;
-    display: flex;
+    display: ${props => props.switchPayment ? "flex": "none"};
     justify-content: space-evenly;
     align-items: center;
     gap: 0.25rem;
@@ -67,3 +67,25 @@ export const TextFooter = styled.p `
     font-weight: 900;
     font-size: 1rem;
     `
+
+    export const CardPayment = styled.section `
+    border-radius: 0.5rem;
+    height: 8vh;
+    color: white;
+    background-color: #363636;
+    box-shadow: 0.15rem 0.15rem 0.1rem white;
+    border: 2px groove white;
+    text-transform: uppercase;
+    width: 10vw;
+    margin: 1.25vh auto;
+    display: ${props => props.switchPayment ? "flex": "none"};
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.25rem;
+
+    :hover {
+        cursor: pointer;
+        color: black;
+        background-color: lightgray;
+    }
+`
