@@ -1,75 +1,84 @@
-import ccbg from '../assets/cc-bg.svg'
-import ccbgvisa from '../assets/cc-bg-visa.svg'
+import {useState} from 'react'
+
 import ccvisa from '../assets/cc-visa.svg'
 import ccicon from '../assets/cc-icon.svg'
 import logo from '../assets/logo.svg'
 import ccchip from '../assets/cc-chip.svg'
-import ccdefault from '../assets/cc-default.svg'
-import ccmastercard from '../assets/cc-mastercard.svg'
-import background from '../assets/background.svg'
 
-import styled from 'styled-components'
+import {GlobalSection, Logo, InputArea, Input, Label, CreditCardArea, TopIcons, InfoArea, Number, Name, DataUser, CreditCardFooter, FooterButton} from './PaymentPageStyled'
 
-const GlobalSection = styled.section `
-display: flex;
-align-items: start;
-background-color: #202024;
-flex-direction: column;
-margin: auto;
-width: 60vw;
-height:64vh;
-border-radius: 1rem;
-`
-
-const Logo = styled.img `
-    margin: 2rem;
-`
-
-const InputArea = styled.section `
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 0.87);
-    gap: 0.5rem;
-`
-
-const Input = styled.input `
-    width: 20vw;
-    background: #121214;
-    border: 1px solid #323238;
-    border-radius: 6px;
-    height: 2rem;
-    padding-inline: 1.2rem;
-
-    color: white;
-    text-transform: uppercase;
-`
-
-const Label = styled.label `
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.01px;
-    text-transform: uppercase;
-    color: #e1e1e6;
-`
 
 export function PaymentPage() {
 
-    return (
-        <GlobalSection>
-            <Logo src={logo} alt="logo" />
-            <InputArea>
-                <Label>Card Number</Label>
-                <Input />
-                <Label>Name</Label>
-                <Input />
+    const [name, setName] = useState("")
+    const [cardNumber, setCardNumber] = useState("")
+    const [date, setDate] = useState("")
+    const [CVC, setCVC] = useState("")
 
+
+    const handleName = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleCardNumber = (e) => {
+        setCardNumber(e.target.value)
+    }
+
+    const handleDate = (e) => {
+        setDate(e.target.value)
+    }
+
+    const handleCVC = (e) => {
+        setCVC(e.target.value)
+    }
+
+    const finalizeShopping = ()=> {
+        alert(`Hello ${name}, you completed your shopping on Nasa E-Commerce, congratulations!`)
+    }
+
+    return (
+        <>
+        <GlobalSection>
+            <InputArea>
+            <Logo src={logo} alt="logo" />
+                <Label>Card Number</Label>
+                <Input value={cardNumber} onChange={handleCardNumber} />
+                <Label>Name</Label>
+                <Input  value={name} onChange={handleName} />
                 <Label>Expiration date</Label>
-                <Input />
+                <Input value={date} onChange={handleDate} />
                 <Label>CVC</Label>
-                <Input />
-            </InputArea>
+                <Input value={CVC} onChange={handleCVC} />
+            </InputArea> 
+
+            <CreditCardArea>
+                <TopIcons>
+                    <img src={ccicon} alt='icon' />
+                    <img src={ccvisa} alt='visa' />
+                </TopIcons>
+                <InfoArea>
+                    <Number>{cardNumber === "" ? "1234 4567 7890 9870" : `${cardNumber}`}</Number>
+                    <Name>name:</Name>
+                    <DataUser>{name === "" ? "John Doe" : `${name}`}</DataUser>
+                </InfoArea>
+
+                <CreditCardFooter>
+                <div>
+                    <Name>expiration date:</Name>
+                    <DataUser>{date === "" ? "02/32" : `${date}` }</DataUser>
+                </div>
+                <div>
+                    <Name>CVC:</Name>
+                    <DataUser>{CVC === "" ? "9999": `${CVC}`}</DataUser>
+                </div>
+                <img src={ccchip} alt='chip' />
+                </CreditCardFooter>
+            </CreditCardArea>
+
+            <FooterButton onClick={finalizeShopping} >
+                <p>finalize shopping!</p>
+            </FooterButton>
         </GlobalSection>
+            </>
     )
 }
