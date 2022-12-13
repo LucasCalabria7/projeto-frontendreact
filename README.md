@@ -1,7 +1,5 @@
-![preview](./print-nasa.png)
+## Nasa E-Commerce
 
-
-# NASA E-Commerce
 
 This project simulate perfectly an E-Commerce Website where, trought React Applications, the user can buy spacial items, like, space suits, space travels and etc. To produce this application it was used basics and advanced React content including many tools and librarys; styled-components, useState, useEffect, React Router and others.
 
