@@ -1,15 +1,19 @@
-# projeto-frontendreact
+# NASA E-Commerce
 
-Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
+This project simulate perfectly an E-Commerce Website where, trought React Applications, the user can buy spacial items, like, space suits, space travels and etc. To produce this application it was used basics and advanced React content including many tools and librarys; styled-components, useState, useEffect, React Router and others.
 
 - JSX
-- Componentes
+- Components
 - Props
-- Estado
-- Fluxo de dados no React
-- Renderização de listas
-- Renderização condicional
+- States
+- React Data Flow
+- Array rendering
+- Conditional Rendering
 - localStorage
+- React Router
+- useEffects
+- Styled-components
+
 
 ## Instruções
 
