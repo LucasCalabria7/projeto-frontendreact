@@ -1,28 +1,11 @@
 import styled from 'styled-components'
 
-export const ImgBuy = styled.img `
-    height: 2.5rem;
-    width: 2.5rem;
-    margin-top: 1vh;
-`
-
-export const BuyTitle = styled.p `
-    color: white;
-    margin-top:2vh;
-    height: 2.5rem; 
-`
-
-export const BuyHeader = styled.section `
-    display:flex;
-    justify-content:center;
-    height:15vh
-`
 
 export const MainBuy = styled.section `
     display: flex;
     justify-content: center;
     flex-direction: column;
-`
+` 
 
 export const CardBuy = styled.section `
     text-align: center;
@@ -32,7 +15,7 @@ export const CardBuy = styled.section `
     color:white;
     box-shadow: 0.15rem 0.15rem 0.1rem #D9DDDC;
     width: 18vw;
-    margin: 0 auto;
+    margin: 1.25vh auto;
     display: flex;
     justify-content: space-evenly;
     gap: 0.25rem;
@@ -46,7 +29,7 @@ export const BuyName = styled.p `
 export const BuyPrice = styled.p `
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-weight: 500;
 `
 
 export const RemoveButton = styled.button `
@@ -55,7 +38,7 @@ export const RemoveButton = styled.button `
     color: white;
     border: none;
 
-    : hover {
+    :hover {
         cursor: pointer;
     }
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.div `
+export const CardGlobalStyle = styled.div `
     margin: 1rem;
     width: 25vw;
     height: 60vh;
@@ -22,23 +22,25 @@ export const Card = styled.div `
 `
 
 export const Button = styled.button `
+    width: 8rem;
+    height: 2rem;
     border-radius: 0.5rem;
     padding : 0.30rem;
     text-transform: uppercase;
-    background-color: #BEBDB8;
-    font-size: 0.80rem;
-    font-weight: 700;
-    margin-top: 0.25rem;
+    background-color: #DDDDDD;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
     margin-bottom: 0.25rem;
     cursor: pointer;
 `
 
 export const ProductName = styled.h3 `
     margin-top: 0.40rem;
-    font-weight: 900;
+    font-weight: 500;
 `
 
 export const ProductPrice = styled.h3 `
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 0.20rem;
 `

@@ -1,10 +1,9 @@
-import './App.css';
-import styled, {createGlobalStyle} from 'styled-components'
-import Header from './components/Header/Header'
-import Main from './Main/Main'
-import {css} from 'styled-components'
+import React from 'react'
 
-const InterFont = css`@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')`
+import {Router} from './routes/Route'
+
+import styled, {createGlobalStyle} from 'styled-components'
+
 
 
 const GlobalStyles = createGlobalStyle`
@@ -12,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: 1.10rem Inter;
+    font-family: 'Bebas Neue', cursive;
   }
 `
 
@@ -30,8 +29,7 @@ function App() {
     <>
     <GlobalStyles/>
     <Container>
-      <Header />
-      <Main />
+      <Router />
     </Container>
     </>
   );

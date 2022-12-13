@@ -1,19 +1,20 @@
 import {ImgFilter, FilterTitle, FilterHeader, FilterMain, InputSearch, OrderTitle, InputSelect} from './filterstyle'
-import FilterIcon from './iconfilter.png'
+
+import FilterIcon from '../../../assets/iconfilter.png'
 
 
 export function Filter (props) {
 
     const onChangeName = (event) => {
-        props.setBuscaNome(event.target.value)
+        props.setSearchName(event.target.value)
     }
 
-    const onChangeOrdemNome = (event) => {
-        props.setOrdemNome(event.target.value)
+    const onChangeSortName = (event) => {
+        props.setSortName(event.target.value)
     }
 
-    const onChangeOrdemPreco = (event) => {
-        props.setOrdemPreco(event.target.value)
+    const onChangeSortPrice = (event) => {
+        props.setSortPrice(event.target.value)
     }
 
     return (
@@ -24,14 +25,14 @@ export function Filter (props) {
     </FilterHeader>
 
     <FilterMain>
-    <InputSearch placeholder="Search" value={props.buscaNome} onChange={onChangeName} />
+    <InputSearch placeholder="Search" value={props.searchName} onChange={onChangeName} />
     <OrderTitle>Order by:</OrderTitle>
-    <InputSelect onChange={onChangeOrdemNome} value={props.ordemNome} >
+    <InputSelect onChange={onChangeSortName} value={props.SortName} >
         <option value="">Name</option>
         <option value="az">A-Z</option>
         <option value="za">Z-A</option>
     </InputSelect>
-    <InputSelect onChange={onChangeOrdemPreco} value={props.ordemPreco} >
+    <InputSelect onChange={onChangeSortPrice} value={props.SortPrice} >
         <option value="">Price</option>
         <option value="high">Highest</option>
         <option value="low">Lowest</option>

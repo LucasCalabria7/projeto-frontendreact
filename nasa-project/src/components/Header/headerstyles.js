@@ -37,22 +37,25 @@ export const ToolBarItems = styled.ul `
 export const A = styled.a `
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    cursor: pointer;
 `
 
-export const InputHeader = styled.input `
-    height: 5vh;
+export const ButtonHeader = styled.button `
+    height: 6vh;
     width: 16vw;
     text-transform: uppercase;
     border-radius: 0.35rem;
-    font-size: 1rem;
+    font-size: 3vh;
     border: 2px solid white;
     text-align: center;
     background-color: transparent;
     color: white;
 
-    ::placeholder {
-        color:white;
+    :hover {
+        
+        color: black;
+        background-color: lightgray;
+        cursor: pointer;
     }
 `
 
